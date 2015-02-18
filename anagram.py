@@ -49,7 +49,7 @@ def main(words, dictFilename):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='Print the anagrams of input words.  Ignores case.')
+        description='Print the case-insensitive anagrams of words.')
     parser.add_argument('words', metavar='W', type=str, nargs='+',
                    help='a word to find the anagrams of')
     parser.add_argument('-d', dest='dictionary', type=str,
