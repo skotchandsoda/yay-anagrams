@@ -1,9 +1,8 @@
-# anagram.py -- find anagrams for input words.
+# anagram.py -- find the case-insensitive anagrams of input words.
 # Copyright (c) 2015 Scott Cheloha.  All rights reserved.
 
 from itertools import permutations
 import argparse
-
 
 wordSet = set()
 
@@ -36,7 +35,7 @@ def main(words, dictFilename):
 
     # Find the anagrams for every string given as input to the script
     for w in words:
-        print(w, ": ", end="")
+        print(w + ": ", end="")
 
         anagrams = findAnagrams(w)
         for a in anagrams:
@@ -49,9 +48,9 @@ def main(words, dictFilename):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description='Print the case-insensitive anagrams of words.')
+        description='Prints the case-insensitive anagrams of words.')
     parser.add_argument('words', metavar='W', type=str, nargs='+',
-                   help='a word to find the anagrams of')
+                   help='word you want the anagrams for')
     parser.add_argument('-d', dest='dictionary', type=str,
                         default="/usr/share/dict/words",
             help='path to dictionary file (default: /usr/share/dict/words)')
