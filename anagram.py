@@ -1,17 +1,19 @@
 # anagram.py -- find the case-insensitive anagrams of input words.
 # Copyright (c) 2015 Scott Cheloha.  All rights reserved.
+# See LICENSE for complete licensing details.
 
 from itertools import permutations
 import argparse
 
 wordSet = set()
 
-# Strip whitespace from a string and lowercase it, too
+# Strip whitespace from a string and lowercase it
 def strip_and_lower(s):
     return s.lower().strip()
 
+# Return true if the lowercased/stripped inputWord appears
+# in the global wordSet
 def dictionaryLookup(inputWord):
-    # Lowercase and strip the input word, just in case
     return(strip_and_lower(inputWord) in wordSet)
 
 # Given an input word, returns all permutations of the word found
