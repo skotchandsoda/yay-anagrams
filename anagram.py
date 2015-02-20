@@ -20,7 +20,7 @@ def dictionaryLookup(inputWord):
 # in the input dictionary
 def findAnagrams(inputWord):
     # Get a list of permutations of the characters in the input word
-    perms = list(''.join(p) for p in permutations(inputWord))
+    perms = set(''.join(p) for p in permutations(inputWord))
     perms.remove(inputWord)
 
     # anagrams is just the sublist of perms that returns true
