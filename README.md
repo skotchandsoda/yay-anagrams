@@ -10,9 +10,9 @@ here:
 > `http://www.cs.duke.edu/~ola/ap/linuxwords` 
 
 If you use an alternate dictionary file, pass the script the location of
-that file via the `--dict` option like this:
+that file via the `-d` option like this:
 
-> `$ python3 anagram.py --dict /path/to/dictionary/file`
+> `$ python3 anagram.py -d /path/to/dictionary/file`
 
 Pass in the `-h` option for the standard usage printout.
 
